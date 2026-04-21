@@ -43,7 +43,7 @@ const capabilities = [
 
 export default function CapabilitiesSection() {
   return (
-    <section id="capabilities" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="capabilities" className="relative py-12 md:py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
       <div className="absolute inset-0 grid-background opacity-20" />

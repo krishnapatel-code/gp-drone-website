@@ -27,7 +27,7 @@ const benefits = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="about" className="relative py-12 md:py-16 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 grid-background opacity-20" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -43,7 +43,7 @@ export default function AboutSection() {
             Know About <span className="text-gradient">Smart Drone Policing</span>
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed tracking-wide">
-            Gujarat Police has pioneered drone-based surveillance through the GP-DRASTI initiative,
+            Gujarat Police has pioneered drone-based surveillance through this advanced initiative,
             transforming how law enforcement monitors, responds, and protects citizens across the state.
           </p>
         </div>

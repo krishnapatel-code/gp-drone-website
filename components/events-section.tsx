@@ -1,37 +1,42 @@
 "use client"
 
 import { GraduationCap, Plane, Settings, Target } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const events = [
   {
     icon: GraduationCap,
     title: "Drone Training Workshops",
     description: "Comprehensive training programs for police officers on drone operations, maintenance, and safety protocols.",
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80",
+    image: "/images/event1.png",
   },
   {
     icon: Plane,
     title: "Police Technology Demos",
     description: "Live demonstrations of latest drone capabilities for senior officers and government officials.",
-    image: "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=600&q=80",
+    image: "/images/event3.png",
   },
   {
     icon: Settings,
     title: "Operational Readiness Sessions",
     description: "Regular drills and exercises to ensure rapid deployment capability across all zones.",
-    image: "https://images.unsplash.com/photo-1579389083078-4e7018379f7e?w=600&q=80",
+    image: "/images/event2.png",
   },
   {
     icon: Target,
     title: "Field Deployment Training",
     description: "Hands-on training in real-world environments for practical operational experience.",
-    image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=600&q=80",
+    image: "/images/event4.png",
   },
 ]
 
 export default function EventsSection() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section id="training" className="relative py-12 md:py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
       <div className="absolute inset-0 grid-background opacity-20" />
@@ -60,32 +65,33 @@ export default function EventsSection() {
             >
               <div className="relative h-full glass-card glass-card-hover rounded-2xl overflow-hidden">
                 <div className="flex flex-col sm:flex-row h-full">
-                  {/* Image */}
-                  <div className="relative w-full sm:w-2/5 h-48 sm:h-auto overflow-hidden">
+                  {/* Image Container - Fixed consistent width */}
+                  <div className="relative w-full sm:w-[200px] h-48 sm:h-auto flex-shrink-0 overflow-hidden">
                     <img
                       src={event.image}
                       alt={event.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-card/80 to-transparent sm:bg-gradient-to-l" />
-                    
-                    {/* Icon on Image */}
-                    <div className="absolute top-4 left-4 sm:hidden w-12 h-12 rounded-xl glass-card flex items-center justify-center">
-                      <event.icon className="w-6 h-6 text-primary" />
+
+                    {/* Icon - Mobile only on image */}
+                    <div className="absolute top-4 left-4 sm:hidden w-10 h-10 rounded-lg glass-card flex items-center justify-center">
+                      <event.icon className="w-5 h-5 text-primary" />
                     </div>
                   </div>
 
-                  {/* Content */}
-                  <div className="flex-1 p-6 flex flex-col justify-center">
-                    {/* Icon - Desktop */}
-                    <div className="hidden sm:flex w-12 h-12 rounded-xl bg-primary/10 items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                      <event.icon className="w-6 h-6 text-primary" />
+                  {/* Content Area */}
+                  <div className="flex-1 p-6 md:p-7 flex flex-col justify-center border-l border-white/5 bg-white/[0.01]">
+                    <div className="flex items-center gap-4 mb-4">
+                      {/* Icon */}
+                      <div className="flex w-10 h-10 rounded-lg bg-primary/10 items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
+                        <event.icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <h3 className="font-[family-name:var(--font-rajdhani)] text-lg font-bold text-foreground group-hover:text-primary transition-colors tracking-wide uppercase">
+                        {event.title}
+                      </h3>
                     </div>
 
-                    <h3 className="font-[family-name:var(--font-rajdhani)] text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                      {event.title}
-                    </h3>
-                    <p className="font-sans text-muted-foreground leading-relaxed tracking-wide text-[15px]">
+                    <p className="font-sans text-muted-foreground leading-relaxed tracking-wide text-[14px]">
                       {event.description}
                     </p>
                   </div>
@@ -93,6 +99,31 @@ export default function EventsSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center section-fade-in">
+          <div className="relative inline-block">
+            {/* Glow effect now always visible */}
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/30 to-accent/30 rounded-3xl opacity-100 blur transition-opacity duration-300" />
+
+            <div className="relative glass-card inline-flex flex-col md:flex-row items-center gap-6 px-8 py-6 rounded-3xl border-accent/50 bg-background/40">
+              <p className="font-sans text-lg text-foreground font-medium">
+                Interested in upcoming Drone Events & Training programs?
+              </p>
+              <div className="relative">
+                <Button
+                  variant="outline"
+                  className="h-10 px-6 border-accent text-white hover:text-white bg-transparent hover:bg-transparent text-sm font-semibold cursor-default transition-all duration-300 hover:scale-105 rounded-md"
+                >
+                  Register Here
+                </Button>
+                <span className="absolute -top-2 -right-2 px-1.5 py-0.5 bg-accent text-[8px] font-bold text-accent-foreground rounded uppercase tracking-tighter shadow-lg">
+                  Coming Soon
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ import Header from "@/components/header"
 import HeroSection from "@/components/hero-section"
 import AboutSection from "@/components/about-section"
 import CapabilitiesSection from "@/components/capabilities-section"
-import UseCasesSection from "@/components/use-cases-section"
+import OperationsSection from "@/components/operations-section"
 import ZoneSection from "@/components/zone-section"
 import NewsSection from "@/components/news-section"
 import EventsSection from "@/components/events-section"
@@ -40,7 +40,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <CapabilitiesSection />
-      <UseCasesSection />
+      <OperationsSection />
       <ZoneSection />
       <NewsSection />
       <EventsSection />

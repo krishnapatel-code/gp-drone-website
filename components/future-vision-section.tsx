@@ -13,6 +13,7 @@ import {
   Flame,
   Cctv,
 } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const phase2Features = [
   { icon: Database, title: "Drone Inventory Management", description: "Complete tracking of all drone assets" },
@@ -33,7 +34,7 @@ const phase3Features = [
 
 export default function FutureVisionSection() {
   return (
-    <section id="future" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="vision" className="relative py-12 md:py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       <div className="absolute inset-0 grid-background opacity-30" />
@@ -47,13 +48,6 @@ export default function FutureVisionSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 section-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
-            </span>
-            <span className="text-sm text-accent font-medium">Coming Soon</span>
-          </div>
           <h2 className="font-[family-name:var(--font-rajdhani)] text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
             Future <span className="text-gradient">Vision</span>
           </h2>
@@ -78,6 +72,13 @@ export default function FutureVisionSection() {
               </div>
             </div>
             <div className="flex-1 h-px bg-gradient-to-r from-primary/50 to-transparent" />
+            <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+              </span>
+              <span className="text-[10px] font-bold text-accent uppercase tracking-widest">Coming Soon</span>
+            </div>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -113,6 +114,13 @@ export default function FutureVisionSection() {
               </div>
             </div>
             <div className="flex-1 h-px bg-gradient-to-r from-accent/50 to-transparent" />
+            <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+              </span>
+              <span className="text-[10px] font-bold text-accent uppercase tracking-widest">Coming Soon</span>
+            </div>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -149,11 +157,17 @@ export default function FutureVisionSection() {
               <h3 className="font-[family-name:var(--font-rajdhani)] text-2xl md:text-3xl font-bold text-foreground mb-4">
                 Building Tomorrow&apos;s <span className="text-gradient">Smart Police Force</span>
               </h3>
-              <p className="font-sans text-muted-foreground max-w-2xl mx-auto leading-relaxed tracking-wide">
+              <p className="font-sans text-muted-foreground max-w-2xl mx-auto leading-relaxed tracking-wide mb-8">
                 Gujarat Police is committed to leveraging cutting-edge technology to create a safer, 
                 more responsive, and intelligent policing ecosystem. Our phased approach ensures 
                 systematic implementation with measurable outcomes.
               </p>
+              <Button 
+                variant="outline"
+                className="h-10 px-8 border-accent text-white hover:text-white bg-transparent hover:bg-transparent text-sm font-semibold transition-all duration-300 hover:scale-105 rounded-full"
+              >
+                Access Portal
+              </Button>
             </div>
           </div>
         </div>

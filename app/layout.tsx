@@ -16,9 +16,9 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: 'Gujarat Police Drone Surveillance Platform | GP-DRASTI',
+  title: 'Gujarat Police Drone Surveillance Platform',
   description: 'AI-Powered Drone Surveillance Platform for Smart Policing - Rapid Response, Real-Time Monitoring, and Enhanced Public Safety for Gujarat Police',
-  keywords: ['Gujarat Police', 'Drone Surveillance', 'GP-DRASTI', 'Smart Policing', 'AI Surveillance', 'Public Safety'],
+  keywords: ['Gujarat Police', 'Drone Surveillance', 'Smart Policing', 'AI Surveillance', 'Public Safety'],
   authors: [{ name: 'Gujarat Police' }],
   icons: {
     icon: [

@@ -11,10 +11,10 @@ const carouselImages = [
     url: "/video/Ahmedabad_Smart_City-night-Drone_View.mp4",
     alt: "Ahmedabad-city-night-view",
   },
-  {
-    url: "/images/gujarat-police-coverage-vision.png",
-    alt: "Aerial city monitoring",
-  },
+  // {
+  //   url: "/images/gujarat-police-coverage-vision.png",
+  //   alt: "Aerial city monitoring",
+  // },
   {
     url: "/video/Drone_Surveillance_of_Ahmedabad_Crowd.mp4",
     alt: "Police drone operation",
@@ -42,7 +42,7 @@ export default function HeroSection() {
     if (currentItem.url.endsWith(".mp4")) {
       if (currentVideo) {
         currentVideo.currentTime = 0
-        currentVideo.play().catch(() => {})
+        currentVideo.play().catch(() => { })
       }
       return
     }

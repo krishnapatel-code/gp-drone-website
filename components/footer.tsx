@@ -1,15 +1,25 @@
 "use client"
 
-import { Shield, Lock, ExternalLink } from "lucide-react"
+import { Shield, ExternalLink, Twitter, Facebook, Youtube, Instagram, Linkedin } from "lucide-react"
 
-const footerLinks = [
+const quickLinksLeft = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
   { label: "Capabilities", href: "#capabilities" },
   { label: "Use Cases", href: "#use-cases" },
+]
+
+const quickLinksRight = [
   { label: "News", href: "#news" },
   { label: "Gallery", href: "#gallery" },
-  { label: "Future Vision", href: "#future" },
+  { label: "Training", href: "#training" },
+  { label: "Future Vision", href: "#vision" },
+  { label: "About", href: "#about" },
+]
+
+const socialLinks = [
+  { icon: Facebook, href: "https://www.facebook.com/dgpgujaratofficial" },
+  { icon: Instagram, href: "https://www.instagram.com/gujaratpolice_/" },
+  { icon: Twitter, href: "https://x.com/gujaratpolice" },
 ]
 
 export default function Footer() {
@@ -21,115 +31,142 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative py-16 overflow-hidden border-t border-border/50">
-      {/* Background */}
-      <div className="absolute inset-0 grid-background opacity-10" />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Security Notice */}
-        <div className="mb-12">
-          <div className="glass-card rounded-2xl p-6 md:p-8 border-destructive/30">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center shrink-0">
-                <Lock className="w-6 h-6 text-destructive" />
-              </div>
-              <div>
-                <h4 className="font-[family-name:var(--font-rajdhani)] text-lg font-bold text-foreground mb-2">
-                  Security Notice
-                </h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  This platform is intended for <span className="text-foreground font-medium">authorized police and internal government use only</span>. 
-                  Unauthorized access, use, or distribution of information from this platform is strictly prohibited 
-                  and may result in legal action.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    <footer className="relative bg-[#080c14] border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-6 lg:px-20 pt-[60px]">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 mb-[40px]">
+          
+          {/* COLUMN 1: Brand */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="absolute inset-0 bg-primary/30 blur-xl rounded-full" />
-                <div className="relative flex items-center justify-center w-12 h-12 rounded-full border-2 border-primary bg-background/50">
+                <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
+                <div className="relative flex items-center justify-center w-12 h-12 rounded-full border border-primary/40 bg-background/30">
                   <Shield className="w-6 h-6 text-primary" />
                 </div>
               </div>
               <div className="flex flex-col">
-                <span className="font-[family-name:var(--font-rajdhani)] text-base font-bold text-foreground tracking-wide">
+                <span className="font-[family-name:var(--font-rajdhani)] text-base font-bold text-foreground tracking-wide leading-tight">
                   GUJARAT POLICE
                 </span>
-                <span className="text-xs text-muted-foreground tracking-widest">
-                  DRONE SURVEILLANCE PLATFORM
+                <span className="text-[10px] text-muted-foreground/80 tracking-[0.2em] font-semibold uppercase leading-tight">
+                  Drone Surveillance Platform
                 </span>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-[#aab3c0] leading-relaxed max-w-sm">
               AI-Powered Drone Surveillance for Smart Policing. Protecting Gujarat with 
               advanced aerial technology and real-time intelligence.
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h5 className="font-[family-name:var(--font-rajdhani)] text-sm font-bold text-foreground mb-4 tracking-wide">
-              QUICK LINKS
-            </h5>
-            <div className="grid grid-cols-2 gap-2">
-              {footerLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => scrollToSection(link.href)}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
+            
+            {/* Social Icons */}
+            <div className="flex items-center gap-[10px]">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="w-[36px] h-[36px] flex items-center justify-center rounded-[8px] border border-white/12 text-[#aab3c0] hover:border-[#00e6b4] hover:text-[#00e6b4] transition-all duration-200"
                 >
-                  {link.label}
-                </button>
+                  <social.icon size={18} />
+                </a>
               ))}
             </div>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h5 className="font-[family-name:var(--font-rajdhani)] text-sm font-bold text-foreground mb-4 tracking-wide">
-              OFFICIAL RESOURCES
+          {/* COLUMN 2: Quick Links */}
+          <div className="md:pl-12">
+            <h5 className="font-[family-name:var(--font-rajdhani)] text-[11px] font-bold text-[#00e6b4] mb-6 tracking-[2px] uppercase">
+              Quick Links
             </h5>
-            <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-x-8 md:gap-x-12">
+              {/* Left Column */}
+              <div className="flex flex-col gap-[10px]">
+                {quickLinksLeft.map((link) => (
+                  <button
+                    key={link.href}
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-[14px] text-[#aab3c0] hover:text-white hover:pl-1 transition-all duration-200 text-left whitespace-nowrap"
+                  >
+                    {link.label}
+                  </button>
+                ))}
+              </div>
+              {/* Right Column */}
+              <div className="flex flex-col gap-[10px]">
+                {quickLinksRight.map((link) => (
+                  <button
+                    key={link.href}
+                    onClick={() => scrollToSection(link.href)}
+                    className="text-[14px] text-[#aab3c0] hover:text-white hover:pl-1 transition-all duration-200 text-left whitespace-nowrap"
+                  >
+                    {link.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* COLUMN 3: Official Resources */}
+          <div>
+            <h5 className="font-[family-name:var(--font-rajdhani)] text-[11px] font-bold text-[#00e6b4] mb-6 tracking-[2px] uppercase">
+              Official Resources
+            </h5>
+            <div className="space-y-4 mb-8">
               <a
-                href="https://www.gujaratpolice.gov.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                href="#"
+                title="Link coming soon"
+                className="flex items-center gap-2 text-[14px] text-[#aab3c0] hover:text-white transition-colors group"
               >
                 Gujarat Police Official Website
-                <ExternalLink className="w-3 h-3" />
+                <ExternalLink className="w-3 h-3 opacity-50 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
               <a
-                href="https://ahmedabadcitypolice.gov.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                href="#"
+                title="Link coming soon"
+                className="flex items-center gap-2 text-[14px] text-[#aab3c0] hover:text-white transition-colors group"
               >
                 Ahmedabad City Police
-                <ExternalLink className="w-3 h-3" />
+                <ExternalLink className="w-3 h-3 opacity-50 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
-              <p className="text-sm text-muted-foreground">
-                Emergency: <span className="text-foreground font-medium">112</span>
-              </p>
+            </div>
+
+            {/* Emergency Box */}
+            <div className="border border-red-500/30 bg-red-500/5 rounded-[10px] p-[12px] px-[16px]">
+              <div className="flex flex-col">
+                <span className="text-[11px] font-bold text-[#ff6b6b] uppercase tracking-wider mb-1 flex items-center gap-2">
+                  <span className="animate-pulse">🚨</span> Emergency Contact
+                </span>
+                <span className="text-[22px] font-bold text-[#ff4444] leading-tight">
+                  112
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/50">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Gujarat Police. All rights reserved.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              GP-DRASTI Initiative | Drone Response & Surveillance Technology Integration
+        {/* Divider */}
+        <div className="border-t border-white/[0.07] w-full" />
+
+        {/* Copyright Bar */}
+        <div className="py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-[13px] text-white/35">
+            © {new Date().getFullYear()} Gujarat Police. All rights reserved.
+          </p>
+          <p className="text-[13px] text-white/35">
+            Drone Response & Surveillance Technology Integration
+          </p>
+        </div>
+      </div>
+
+      {/* Security Notice (Very Bottom) */}
+      <div className="border-t border-white/[0.05] py-6 px-4 bg-black/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-block px-6 py-3 rounded-xl border border-red-500/20 bg-red-500/[0.02]">
+            <p className="text-[12px] text-red-500/90 leading-relaxed font-medium">
+              <span className="mr-2">🔒</span>
+              <span className="font-bold">ATTENTION:</span> This platform is intended for authorized police and internal government use only. 
+              Unauthorized access, use, or distribution of information is strictly prohibited 
+              and may result in legal action.
             </p>
           </div>
         </div>
