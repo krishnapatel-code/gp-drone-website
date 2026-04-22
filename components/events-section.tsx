@@ -8,25 +8,25 @@ const events = [
     icon: GraduationCap,
     title: "Drone Training Workshops",
     description: "Comprehensive training programs for police officers on drone operations, maintenance, and safety protocols.",
-    image: "/images/event1.png",
+    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event1_acmodn",
   },
   {
     icon: Plane,
     title: "Police Technology Demos",
     description: "Live demonstrations of latest drone capabilities for senior officers and government officials.",
-    image: "/images/event3.png",
+    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event3_tsjb1e",
   },
   {
     icon: Settings,
     title: "Operational Readiness Sessions",
     description: "Regular drills and exercises to ensure rapid deployment capability across all zones.",
-    image: "/images/event2.png",
+    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event2_vrzco2",
   },
   {
     icon: Target,
     title: "Field Deployment Training",
     description: "Hands-on training in real-world environments for practical operational experience.",
-    image: "/images/event4.png",
+    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event4_uhsnih",
   },
 ]
 

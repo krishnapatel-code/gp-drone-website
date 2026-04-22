@@ -7,56 +7,56 @@ import { Button } from "@/components/ui/button"
 const galleryImages = [
   {
     id: 1,
-    src: "/video/Drone_Surveillance_of_Ahmedabad_Crowd.mp4",
+    src: "https://res.cloudinary.com/da5v0lev4/video/upload/q_auto/f_auto/v1776833508/Drone_Surveillance_of_Ahmedabad_Crowd_pnuvum.mp4",
     alt: "Police drone operation",
     category: "Video",
     type: "video"
   },
   {
     id: 2,
-    src: "/images/event1.png",
+    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event1_acmodn",
     alt: "Drone surveillance over city",
     category: "Aerial",
     type: "image"
   },
   {
     id: 3,
-    src: "/video/Ahmedabad_Smart_City-night-Drone_View.mp4",
+    src: "https://res.cloudinary.com/da5v0lev4/video/upload/q_auto/f_auto/v1776779631/Ahmedabad_Smart_City-night-Drone_View_uxfsz6.mp4",
     alt: "Ahmedabad-city-night-view",
     category: "Night Vision",
     type: "video"
   },
   {
     id: 4,
-    src: "/images/event3.png",
+    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event3_tsjb1e",
     alt: "Drone technology",
     category: "Technology",
     type: "image"
   },
   {
     id: 5,
-    src: "/images/event4.png",
+    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event4_uhsnih",
     alt: "City monitoring",
     category: "Surveillance",
     type: "image"
   },
   {
     id: 6,
-    src: "/images/news2.png",
+    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/news2_tl7mp3",
     alt: "Training session",
     category: "Training",
     type: "image"
   },
   {
     id: 7,
-    src: "/images/news3.png",
+    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/news3_wy3ytk",
     alt: "Control room operations",
     category: "Operations",
     type: "image"
   },
   {
     id: 8,
-    src: "/images/news4.png",
+    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/news4_vdtuf7",
     alt: "Traffic monitoring",
     category: "Traffic",
     type: "image"
@@ -125,7 +125,7 @@ export default function GallerySection() {
                       className="w-full h-full object-cover"
                     />
                   )}
-                  
+
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   {/* Overlay Content */}

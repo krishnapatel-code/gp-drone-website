@@ -20,7 +20,7 @@ export default function ZoneSection() {
             Drone <span className="text-gradient">Zone Awareness</span>
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed tracking-wide">
-            Understanding operational zones is critical for safe and compliant drone operations. 
+            Understanding operational zones is critical for safe and compliant drone operations.
             Our platform provides real-time zone visualization and compliance monitoring.
           </p>
         </div>
@@ -29,11 +29,11 @@ export default function ZoneSection() {
         <div className="relative max-w-[1100px] mx-auto section-fade-in">
           <div className="relative rounded-[16px] overflow-hidden group shadow-2xl border border-white/5 bg-background/50">
             <img
-              src="/images/map.png"
+              src="https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/map_l1lews"
               alt="Ahmedabad Drone Airspace Map"
               className="w-full h-auto object-cover opacity-80"
             />
-            
+
             {/* Map Overlay for Darkening */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e1a]/40 to-transparent pointer-events-none" />
 

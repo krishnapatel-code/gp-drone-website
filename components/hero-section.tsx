@@ -4,11 +4,11 @@ import { useState, useEffect, useCallback, useRef } from "react"
 
 const carouselImages = [
   {
-    url: "/images/Ahmedabad-city.png",
+    url: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/Ahmedabad-city_soaf5k",
     alt: "AI Drone Surveillance over city",
   },
   {
-    url: "/video/Ahmedabad_Smart_City-night-Drone_View.mp4",
+    url: "https://res.cloudinary.com/da5v0lev4/video/upload/q_auto/f_auto/v1776779631/Ahmedabad_Smart_City-night-Drone_View_uxfsz6.mp4",
     alt: "Ahmedabad-city-night-view",
   },
   // {
@@ -16,7 +16,7 @@ const carouselImages = [
   //   alt: "Aerial city monitoring",
   // },
   {
-    url: "/video/Drone_Surveillance_of_Ahmedabad_Crowd.mp4",
+    url: "https://res.cloudinary.com/da5v0lev4/video/upload/q_auto/f_auto/v1776833508/Drone_Surveillance_of_Ahmedabad_Crowd_pnuvum.mp4",
     alt: "Police drone operation",
   },
 

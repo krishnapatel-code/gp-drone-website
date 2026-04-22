@@ -9,7 +9,7 @@ const newsItems = [
     excerpt: "Gujarat Police announces comprehensive drone coverage across all 33 police zones in Ahmedabad city.",
     date: "March 15, 2024",
     category: "Deployment",
-    image: "/images/news1.png",
+    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/news1_bnwefu",
     featured: true,
     link: "https://insidefpv.com/blogs/blogs/how-gujarat-police-are-using-drones-to-combat-crime"
   },
@@ -19,7 +19,7 @@ const newsItems = [
     excerpt: "Over 1 million devotees monitored safely using advanced crowd analysis algorithms during the annual procession.",
     date: "March 10, 2024",
     category: "Operations",
-    image: "/images/news2.png",
+    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/news2_tl7mp3",
     featured: true,
     link: "https://deshgujarat.com/2025/06/24/ahmedabad-rath-yatra-2025-over-23000-cops-227-live-cameras-41-drones-2872-body-cameras-to-monitor-security/"
   },
@@ -29,7 +29,7 @@ const newsItems = [
     excerpt: "Serial temple thief hiding in farm fields tracked and arrested by Dahod Police using live drone camera after 1km chase through hilly terrain.",
     date: "January 29, 2025",
     category: "operations",
-    image: "/images/news3.png",
+    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/news3_wy3ytk",
     featured: false,
     link: "https://deshgujarat.com/2025/01/29/dahod-police-nabs-temple-theft-accused-with-help-of-live-drone-footage/"
   },
@@ -39,7 +39,7 @@ const newsItems = [
     excerpt: "Live drone footage helped Gujarat Police track and arrest suspects who had abandoned a stolen dumper truck from Chhattisgarh — dramatic chase caught on camera.",
     date: "March 2, 2025",
     category: "Operations",
-    image: "/images/news4.png",
+    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/news4_vdtuf7",
     featured: false,
     link: "https://www.youtube.com/watch?v=6Fw-WqAzEr4"
   },
@@ -49,7 +49,7 @@ const newsItems = [
     excerpt: "Ahmedabad Police issued strict surveillance guidelines for Navratri 2025 — mandatory CCTV, watchtowers, and drone monitoring at all major garba venues across the city.",
     date: "September 21, 2025",
     category: "Surveillance",
-    image: "/images/news5.png",
+    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/news5_plnazd",
     featured: false,
     link: "https://deshgujarat.com/2025/09/21/ahmedabad-police-announce-strict-guidelines-and-massive-security-deployment-for-navratri-2025/",
   },
