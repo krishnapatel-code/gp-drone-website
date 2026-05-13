@@ -43,18 +43,19 @@ export default function Header() {
           {/* Left: Logo */}
           <div className="flex-1 flex items-center justify-start">
             <div className="flex items-center gap-3">
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full" />
-                <div className="relative flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full border border-primary/50 bg-background/30">
-                  <Shield className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                </div>
+              <div className="relative flex items-center justify-center">
+                <img 
+                  src="https://res.cloudinary.com/da5v0lev4/image/upload/v1778497017/logo_rfw6jb.png" 
+                  alt="Gujarat Police Logo"
+                  className="w-12 h-12 md:w-14 md:h-14 object-contain"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-[family-name:var(--font-rajdhani)] text-sm md:text-base font-semibold text-foreground tracking-wide">
                   GUJARAT POLICE
                 </span>
                 <span className="text-[10px] md:text-xs text-muted-foreground/80 tracking-widest uppercase">
-                  Drone Platform
+                  Drone Training Institute
                 </span>
               </div>
             </div>

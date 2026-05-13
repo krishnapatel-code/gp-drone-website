@@ -14,9 +14,9 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event1_acmodn",
-    alt: "Drone surveillance over city",
-    category: "Aerial",
+    src: "/images/event3.png",
+    alt: "Ground exercise drone handling",
+    category: "Training",
     type: "image"
   },
   {
@@ -28,40 +28,47 @@ const galleryImages = [
   },
   {
     id: 4,
-    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event3_tsjb1e",
-    alt: "Drone technology",
-    category: "Technology",
+    src: "/images/event1.png",
+    alt: "Field deployment training session",
+    category: "Field training",
     type: "image"
   },
   {
     id: 5,
-    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event4_uhsnih",
-    alt: "City monitoring",
-    category: "Surveillance",
+    src: "/images/event5.png",
+    alt: "GPDTI official batch ceremony",
+    category: "Events",
     type: "image"
   },
   {
     id: 6,
-    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/news2_tl7mp3",
-    alt: "Training session",
-    category: "Training",
+    src: "/images/gallery4.png",
+    alt: "DGCA inspection team at GPDTI",
+    category: "Events",
     type: "image"
   },
   {
     id: 7,
-    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/news3_wy3ytk",
-    alt: "Control room operations",
-    category: "Operations",
+    src: "/images/gallery3.png",
+    alt: "Simulation training sessions",
+    category: "Training",
     type: "image"
   },
   {
     id: 8,
-    src: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/news4_vdtuf7",
-    alt: "Traffic monitoring",
-    category: "Traffic",
+    src: "/images/gallery2.png",
+    alt: "Drone inspection at field site",
+    category: "Inspection",
     type: "image"
   },
-]
+  {
+    id: 9,
+    src: "/images/gallery1.png",
+    alt: "Drone unit close-up inspection",
+    category: "Inspection",
+    type: "image"
+  },
+];
 
 export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
@@ -97,7 +104,6 @@ export default function GallerySection() {
             let gridClass = "col-span-1 row-span-1"
             if (index === 0) gridClass = "col-span-2 row-span-2 md:col-span-2 md:row-span-2"
             if (index === 2) gridClass = "col-span-2 row-span-1 md:col-span-2 md:row-span-1"
-            if (index === 5) gridClass = "col-span-1 row-span-2 md:col-span-1 md:row-span-2"
 
             return (
               <div

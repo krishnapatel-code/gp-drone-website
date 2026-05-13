@@ -111,7 +111,7 @@ export default function OperationsSection() {
           animation: flow 1.5s infinite linear;
         }
       `}</style>
-      
+
       {/* Background Restoration from Capabilities Section */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
       <div className="absolute inset-0 grid-background opacity-20" />
@@ -123,10 +123,10 @@ export default function OperationsSection() {
             <span className="text-sm text-accent font-medium uppercase tracking-wider">Field Operations</span>
           </div>
           <h2 className="font-[family-name:var(--font-rajdhani)] text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Real-Time <span className="text-gradient">Police Drone Operations</span>
+            Real-Time<span className="text-gradient">GPDTI Drone Operations</span>
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed tracking-wide">
-            Live deployment monitoring and automated emergency response coordination for Gujarat City surveillance.
+            Live training monitoring and operational deployment coordination for Gujarat Police drone force.
           </p>
         </div>
 
@@ -135,14 +135,14 @@ export default function OperationsSection() {
           <div className="flex-1">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {operations.map((op, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className={`section-fade-in group relative ${op.full ? 'md:col-span-2' : ''}`}
                   style={{ transitionDelay: `${idx * 100}ms` }}
                 >
                   {/* Green Glow Box Animation */}
                   <div className="absolute -inset-0.5 bg-primary/40 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-300" />
-                  
+
                   <div className="relative glass-card rounded-2xl p-6 h-full transition-all duration-300 group-hover:border-primary flex flex-col justify-between">
                     <div>
                       <div className="flex justify-between items-start mb-6">
@@ -162,7 +162,7 @@ export default function OperationsSection() {
                         {op.desc}
                       </p>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-2 mt-2">
                       {op.tags.map((tag, tIdx) => (
                         <span key={tIdx} className="px-3 py-1 text-[10px] rounded-full bg-primary/10 text-primary border border-primary/20">
@@ -184,7 +184,7 @@ export default function OperationsSection() {
                 const isReached = idx <= activeStep
                 const isCurrent = idx === activeStep
                 const isCompleted = idx < activeStep
-                
+
                 return (
                   <div key={idx} className="relative flex gap-6">
                     {/* Connector & Circle with Accent Glow */}
@@ -194,7 +194,7 @@ export default function OperationsSection() {
                       >
                         {idx + 1}
                       </div>
-                      
+
                       {idx !== steps.length - 1 && (
                         <div className={`w-[2px] h-full min-h-[40px] relative transition-colors duration-500 ${isCompleted ? 'bg-primary shadow-[0_0_10px_#4a9eff]' : 'bg-white/5'}`}>
                           {isCurrent && <div className="connector-flow" />}

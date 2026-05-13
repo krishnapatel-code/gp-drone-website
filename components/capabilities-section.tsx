@@ -1,43 +1,43 @@
 "use client"
 
-import { Video, Zap, Users, Search, Car, UserSearch } from "lucide-react"
+import { useEffect } from "react"
 
 const capabilities = [
   {
-    icon: Video,
-    title: "Real-Time Aerial Surveillance",
-    description: "Live drone camera monitoring to watch roads, public places, and important city areas in real time.",
-    features: ["Live Camera", "City Watch", "Area Coverage"],
+    icon: "workspace_premium",
+    title: "RPTO Certified Training",
+    description: "DGCA-authorized Remote Pilot Certificate training including theory, simulator, and practical flight sessions for Gujarat Police personnel.",
+    features: ["DGCA Approved", "Remote Pilot", "Certified"],
   },
   {
-    icon: Zap,
-    title: "Rapid Incident Response",
-    description: "Drones quickly reach the location and help police respond faster during emergencies and incidents.",
-    features: ["Fast Action", "Quick Support", "Emergency"],
+    icon: "videogame_asset",
+    title: "Simulator Training",
+    description: "State-of-the-art simulator facility providing realistic flight training experience before actual drone operations.",
+    features: ["Flight Sim", "Practice", "Safe Training"],
   },
   {
-    icon: Users,
-    title: "Crowd & Event Monitoring",
-    description: "Helps police monitor large crowds, festivals, and public events to maintain safety and control.",
-    features: ["Crowd Safety", "Event Watch", "Public Control"],
+    icon: "engineering",
+    title: "Ground Exercise Training",
+    description: "Hands-on ground exercises covering pre-flight checks, safety protocols, and drone handling as per DGCA standards.",
+    features: ["Pre-Flight", "Safety", "Hands-on"],
   },
   {
-    icon: Search,
-    title: "Crime Detection Support",
-    description: "Drones help track suspicious activities and support police during crime investigations.",
-    features: ["Crime Alert", "Activity Track", "Investigation"],
+    icon: "airplanemode_active",
+    title: "Drone Fleet Management",
+    description: "Inspection, allocation and maintenance of 109 drones deployed across Gujarat — including Asteria, Tunga, Ninja and Long Range UAVs.",
+    features: ["109 Drones", "Maintenance", "Allocation"],
   },
   {
-    icon: Car,
-    title: "Traffic & Public Safety",
-    description: "Used for traffic monitoring, road safety checks, and managing busy public areas.",
-    features: ["Traffic Watch", "Road Safety", "Public Areas"],
+    icon: "gpp_maybe",
+    title: "Red Zone Operations",
+    description: "Unique NOC obtained from Ministry of Civil Aviation to conduct training operations within Red Zone at GPA Campus, Karai.",
+    features: ["NOC Approved", "Red Zone", "MOCA"],
   },
   {
-    icon: UserSearch,
-    title: "Missing Persons Tracking",
-    description: "Helps locate missing persons quickly by scanning large areas from above.",
-    features: ["Search Support", "Live Tracking", "Area Scan"],
+    icon: "category",
+    title: "Multi-Category Drone Training",
+    description: "Training covers Micro, Small and Rotorcraft category drones — Asteria A200-XT, Tunga, Tethered, Ninja and Long Range UAVs.",
+    features: ["Micro", "Small", "Rotorcraft"],
   },
 ]
 
@@ -55,11 +55,10 @@ export default function CapabilitiesSection() {
             <span className="text-sm text-accent font-medium">Platform Capabilities</span>
           </div>
           <h2 className="font-[family-name:var(--font-rajdhani)] text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Advanced <span className="text-gradient">Surveillance Technology</span>
+            Advanced <span className="text-gradient">Drone Training Capabilities</span>
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed tracking-wide">
-            Our comprehensive drone surveillance platform combines cutting-edge hardware with 
-            AI-powered software to deliver unmatched operational capabilities.
+            GPDTI delivers comprehensive DGCA-compliant training — from theory and simulation to live flight operations — building Gujarat's certified drone force.
           </p>
         </div>
 
@@ -77,7 +76,9 @@ export default function CapabilitiesSection() {
                 <div className="relative mb-6">
                   <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <capability.icon className="w-8 h-8 text-primary" />
+                    <span className="material-symbols-rounded text-primary text-[32px]">
+                      {capability.icon}
+                    </span>
                   </div>
                 </div>
 
@@ -110,10 +111,10 @@ export default function CapabilitiesSection() {
           <div className="glass-card rounded-2xl p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { value: "100+", label: "Drones Deployed" },
-                { value: "33", label: "Zones Covered" },
-                { value: "24/7", label: "Operations" },
-                { value: "99.9%", label: "Uptime" },
+                { value: "14", label: "Training Programs Conducted" },
+                { value: "33", label: "Districts & Cities" },
+                { value: "102", label: "RPTO Certified" },
+                { value: "5", label: "Drone Categories" },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="font-[family-name:var(--font-rajdhani)] text-3xl md:text-4xl font-bold text-primary mb-1">

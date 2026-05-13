@@ -20,8 +20,7 @@ export default function ZoneSection() {
             Drone <span className="text-gradient">Zone Awareness</span>
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed tracking-wide">
-            Understanding operational zones is critical for safe and compliant drone operations.
-            Our platform provides real-time zone visualization and compliance monitoring.
+            GPDTI operates under special NOC from Ministry of Civil Aviation within Red Zone at Gujarat Police Academy, Karai — ensuring full regulatory compliance for all training operations.
           </p>
         </div>
 
@@ -56,7 +55,7 @@ export default function ZoneSection() {
               </div>
               <h4 className="text-[14px] text-white font-semibold mb-2">No Fly Zone</h4>
               <p className="text-[12px] text-[#aab3c0] leading-relaxed">
-                3km radius. Airports, Military, ISRO, Stadiums, Jails. Complete ban.
+                3km radius. Airports, Military, ISRO, Stadiums, Jails. Complete ban.GPDTI operates here under special MOCA NOC.
               </p>
             </div>
 

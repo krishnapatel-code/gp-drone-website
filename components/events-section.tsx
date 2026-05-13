@@ -1,32 +1,32 @@
 "use client"
 
-import { GraduationCap, Plane, Settings, Target } from "lucide-react"
+import { GraduationCap, Target, Monitor } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const events = [
   {
     icon: GraduationCap,
     title: "Drone Training Workshops",
-    description: "Comprehensive training programs for police officers on drone operations, maintenance, and safety protocols.",
-    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event1_acmodn",
+    description: "Theoretical training sessions conducted for 102 police personnel covering drone operations, safety protocols, and technical knowledge at RPTO-GPDTI.",
+    image: "/images/event2.png",
   },
   {
-    icon: Plane,
-    title: "Police Technology Demos",
-    description: "Live demonstrations of latest drone capabilities for senior officers and government officials.",
-    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event3_tsjb1e",
-  },
-  {
-    icon: Settings,
-    title: "Operational Readiness Sessions",
-    description: "Regular drills and exercises to ensure rapid deployment capability across all zones.",
-    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event2_vrzco2",
+    icon: GraduationCap,
+    title: "OPERATIONAL READINESS SESSIONS",
+    description: "Hands-on ground exercise drills conducted to ensure practical drone handling capability and rapid deployment readiness across all police zones.",
+    image: "/images/event3.png",
   },
   {
     icon: Target,
-    title: "Field Deployment Training",
-    description: "Hands-on training in real-world environments for practical operational experience.",
-    image: "https://res.cloudinary.com/da5v0lev4/image/upload/f_auto,q_auto/event4_uhsnih",
+    title: "FIELD DEPLOYMENT TRAINING",
+    description: "Advanced simulator-based training provided to police personnel for real-world drone operation experience in a controlled environment at GPDTI.",
+    image: "/images/event4.png",
+  },
+  {
+    icon: Monitor,
+    title: "POLICE TECHNOLOGY DEMOS",
+    description: "First successful batch of RPTO Theory & Simulator training completed at Gujarat Police Drone Training Institute (GPDTI) — a milestone in police drone capability.",
+    image: "/images/event5.png",
   },
 ]
 

@@ -16,26 +16,13 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: 'Gujarat Police Drone Surveillance Platform',
-  description: 'AI-Powered Drone Surveillance Platform for Smart Policing - Rapid Response, Real-Time Monitoring, and Enhanced Public Safety for Gujarat Police',
-  keywords: ['Gujarat Police', 'Drone Surveillance', 'Smart Policing', 'AI Surveillance', 'Public Safety'],
+  title: 'Gujarat Police Drone Training Institute',
+  description: 'Advanced Drone Training and Excellence Center - Empowering Gujarat Police with Professional Drone Operations, Training, and Aerial Intelligence.',
+  keywords: ['Gujarat Police', 'Drone Training', 'Drone Institute', 'Smart Policing', 'AI Surveillance'],
   authors: [{ name: 'Gujarat Police' }],
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
   },
 }
 
@@ -52,6 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${rajdhani.variable} bg-background`}>
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+      </head>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

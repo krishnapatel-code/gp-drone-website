@@ -39,24 +39,25 @@ export default function Footer() {
           {/* COLUMN 1: Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
-                <div className="relative flex items-center justify-center w-12 h-12 rounded-full border border-primary/40 bg-background/30">
-                  <Shield className="w-6 h-6 text-primary" />
-                </div>
+              <div className="relative flex items-center justify-center">
+                <img 
+                  src="https://res.cloudinary.com/da5v0lev4/image/upload/v1778497017/logo_rfw6jb.png" 
+                  alt="Gujarat Police Logo"
+                  className="w-14 h-14 object-contain"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-[family-name:var(--font-rajdhani)] text-base font-bold text-foreground tracking-wide leading-tight">
                   GUJARAT POLICE
                 </span>
                 <span className="text-[10px] text-muted-foreground/80 tracking-[0.2em] font-semibold uppercase leading-tight">
-                  Drone Surveillance Platform
+                  Drone Training Institute
                 </span>
               </div>
             </div>
             <p className="text-sm text-[#aab3c0] leading-relaxed max-w-sm">
-              AI-Powered Drone Surveillance for Smart Policing. Protecting Gujarat with 
-              advanced aerial technology and real-time intelligence.
+              Empowering law enforcement through specialized drone training. The Gujarat Police 
+              Drone Training Institute provides professional aerial surveillance expertise.
             </p>
             
             {/* Social Icons */}

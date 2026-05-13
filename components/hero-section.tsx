@@ -104,15 +104,15 @@ export default function HeroSection() {
       <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
         <h1 className="font-[family-name:var(--font-rajdhani)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] tracking-tight">
-          <span className="text-gradient">AI-Powered</span>
+          <span className="text-gradient">Empowering</span>
           <br />
           <span className="text-foreground">
-            Drone Surveillance & Management</span>
+            Smart Policing Through Aerial Innovation</span>
         </h1>
 
         {/* Description */}
         <p className="font-sans text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed tracking-wide">
-          Smart policing through aerial monitoring, rapid response, and real-time surveillance for Gujarat Police.
+          Gujarat's first DGCA-authorized Police Drone Training Institute. Training certified remote pilots for safer communities.
         </p>
 
         {/* Slide Indicators */}
