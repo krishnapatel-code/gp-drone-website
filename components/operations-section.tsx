@@ -123,7 +123,7 @@ export default function OperationsSection() {
             <span className="text-sm text-accent font-medium uppercase tracking-wider">Field Operations</span>
           </div>
           <h2 className="font-[family-name:var(--font-rajdhani)] text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Real-Time<span className="text-gradient">GPDTI Drone Operations</span>
+            Real-Time<span className="text-gradient"> GPDTI Drone Operations</span>
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed tracking-wide">
             Live training monitoring and operational deployment coordination for Gujarat Police drone force.
