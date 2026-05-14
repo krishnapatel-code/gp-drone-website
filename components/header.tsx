@@ -39,15 +39,15 @@ export default function Header() {
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-16 md:h-20">
+        <div className="flex items-center h-24 md:h-28">
           {/* Left: Logo */}
-          <div className="flex-1 flex items-center justify-start">
+          <div className="flex-1 flex items-center justify-start py-2">
             <div className="flex items-center gap-3">
               <div className="relative flex items-center justify-center">
                 <img
                   src="https://res.cloudinary.com/da5v0lev4/image/upload/v1778497017/logo_rfw6jb.png"
                   alt="Gujarat Police Logo"
-                  className="w-16 h-16 md:w-22 md:h-22 object-contain"
+                  className="w-20 h-20 md:w-26 md:h-26 object-contain"
                 />
               </div>
             </div>

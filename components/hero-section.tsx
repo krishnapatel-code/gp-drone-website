@@ -102,6 +102,11 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8">
+          <span className="text-sm text-primary font-medium tracking-wider uppercase font-[family-name:var(--font-rajdhani)]">Gujarat Police Drone Training Institute</span>
+        </div>
+
         {/* Main Heading */}
         <h1 className="font-[family-name:var(--font-rajdhani)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] tracking-tight">
           <span className="text-gradient">Empowering</span>

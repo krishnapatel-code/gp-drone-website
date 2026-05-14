@@ -3,10 +3,10 @@
 import { motion } from "framer-motion"
 
 const stats = [
-  { label: "ACTIVE PROGRAMS", value: "14 Skills" },
-  { label: "TRAINING STANDARD", value: "DGCA Certified" },
-  { label: "REGIONAL REACH", value: "All Gujarat" },
-  { label: "ELITE PARTNERS", value: "4 Organizations" },
+  { label: "TRAINING PROGRAMS", value: "14 Conducted" },
+  { label: "REGIONAL REACH", value: "33 Districts & Cities" },
+  { label: "RPTO AUTHORIZATION", value: "102 Certified" },
+  { label: "DRONE FLEET", value: "5 Categories" },
 ]
 
 export default function StatsBar() {

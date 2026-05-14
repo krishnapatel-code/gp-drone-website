@@ -47,7 +47,7 @@ export default function Footer() {
                 <img
                   src="https://res.cloudinary.com/da5v0lev4/image/upload/v1778497017/logo_rfw6jb.png"
                   alt="Gujarat Police Logo"
-                  className="w-22 h-22 object-contain"
+                  className="w-32 h-32 object-contain"
                 />
               </div>
             </div>

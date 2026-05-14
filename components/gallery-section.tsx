@@ -7,10 +7,10 @@ import { Button } from "@/components/ui/button"
 const galleryImages = [
   {
     id: 1,
-    src: "https://res.cloudinary.com/da5v0lev4/video/upload/q_auto/f_auto/v1776833508/Drone_Surveillance_of_Ahmedabad_Crowd_pnuvum.mp4",
-    alt: "Police drone operation",
-    category: "Video",
-    type: "video"
+    src: "/images/trainingpartner.png",
+    alt: "Drone Training Partner",
+    category: "Training Partner",
+    type: "image"
   },
   {
     id: 2,
