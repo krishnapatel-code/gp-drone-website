@@ -1,172 +1,241 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Maximize2 } from "lucide-react";
+import { CheckCircle2, X, Maximize2 } from "lucide-react";
 
-const tableData = [
+const slides = [
     {
-        partner: "Drone Destination Pvt. Ltd.",
-        location: "Gurugram",
-        focus: "DGCA-certified Remote Pilot Training"
+        id: 1,
+        image: "/images/trainingpartner.png",
+        imageCaption: "GPDTI Staff Training Program — CAPT Bhopal, December 2024",
+        title: "Our Training Partners",
+        objectFit: "cover",
+        content: {
+            type: "table",
+            data: [
+                { partner: "Drone Destination Pvt. Ltd.", location: "Gurugram", focus: "DGCA-certified Remote Pilot Training" },
+                { partner: "CAPT — Central Academy for Police Training", location: "Bhopal, MP", focus: "Tactical Law Enforcement & Drone Operations" },
+                { partner: "Flapone Aviation", location: "Sonepat, Haryana", focus: "Maintenance & Specialized Flight" },
+                { partner: "Dronacharya School", location: "Army Station, Gandhinagar", focus: "Military-Grade Operations" },
+            ]
+        }
     },
     {
-        partner: "CAPT — Central Academy for Police Training",
-        location: "Bhopal, MP",
-        focus: "Tactical Law Enforcement & Drone Operations"
+        id: 2,
+        image: "/images/trainningpartner2.png",
+        imageCaption: "NOC Meeting — Ministry of Civil Aviation & Airport Authority of India",
+        title: "Red Zone Operations",
+        objectFit: "cover",
+        content: {
+            type: "list",
+            points: [
+                "NOC obtained from Ministry of Civil Aviation, Government of India",
+                "Permissions obtained from Airports Authority of India",
+                "Standard Operating Procedures (SOPs) approved for Red Zone",
+                "GPDTI legally operates within Red Zone at GPA Campus, Karai, Gandhinagar",
+            ]
+        }
     },
     {
-        partner: "Flapone Aviation",
-        location: "Sonepat, Haryana",
-        focus: "Maintenance & Specialized Flight"
+        id: 3,
+        image: "/images/gallery4.png",
+        imageCaption: "DGCA Inspection Team at GPDTI — RPTO Authorization Process",
+        title: "DGCA Inspection",
+        objectFit: "cover",
+        content: {
+            type: "list",
+            points: [
+                "Full infrastructure, equipment and training facilities assessed",
+                "Classrooms, simulators, drones and workstations verified",
+                "Training and Procedures Manual examined and approved by DGCA",
+                "Full compliance with DGCA norms and standards confirmed",
+            ]
+        }
     },
     {
-        partner: "Dronacharya School",
-        location: "Army Station, Gandhinagar",
-        focus: "Military-Grade Operations"
+        id: 4,
+        image: "/images/certficate.png",
+        imageCaption: "RPTO Certificate of Authorisation — Issued by DGCA, Government of India",
+        title: "RPTO Authorization",
+        objectFit: "contain",
+        imageBg: "bg-white/5",
+        tightContainer: true,
+        content: {
+            type: "cards",
+            cards: [
+                { label: "File No", value: "DGCA-31036/8/2025-DRONE-Dte" },
+                { label: "Authorization No", value: "RPTO No. 30/2025" },
+                { label: "Valid From", value: "11.06.2025" },
+                { label: "Valid Till", value: "10.06.2035" },
+                { label: "Category", value: "Rotorcraft — Small" },
+                { label: "Issued By", value: "Maneesh Kumar, Joint DG" },
+            ]
+        }
     }
 ];
 
 export default function TrainingPartners() {
+    const [currentSlide, setCurrentSlide] = useState(0);
     const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
+    const nextSlide = useCallback(() => {
+        if (isLightboxOpen) return;
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, [isLightboxOpen]);
+
+    useEffect(() => {
+        const timer = setInterval(nextSlide, 8000);
+        return () => clearInterval(timer);
+    }, [nextSlide]);
+
     return (
-        <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24" id="partners">
-            {/* Background Elements */}
-            <div className="absolute inset-0 grid-background opacity-20 -z-10" />
+        <section className="relative py-12 md:py-16 overflow-hidden" id="partners">
+            {/* Background */}
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
+            <div className="absolute inset-0 grid-background opacity-20" />
 
-            {/* Section Header */}
-            <div className="text-center mb-16 section-fade-in">
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6"
-                >
-                    <span className="text-sm text-primary font-medium uppercase tracking-wider">Staff Development</span>
-                </motion.div>
-                <motion.h2
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                    className="font-[family-name:var(--font-rajdhani)] text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6"
-                >
-                    Our <span className="text-gradient">Training Partners</span>
-                </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed tracking-wide"
-                >
-                    GPDTI staff trained through elite specialized programs across India to maintain the highest standards of drone aviation.
-                </motion.p>
-            </div>
-
-            {/* 12 Column Layout for precise control (7 for image, 5 for table) */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-                {/* Left Column: Image with Caption (7/12 width) */}
-                <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="lg:col-span-7 relative group rounded-3xl overflow-hidden border border-primary/20 cursor-pointer h-full"
-                    onClick={() => setIsLightboxOpen(true)}
-                >
-                    <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <div className="bg-black/50 backdrop-blur-md p-2 rounded-full border border-white/20">
-                            <Maximize2 className="w-5 h-5 text-white" />
-                        </div>
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header */}
+                <div className="text-center mb-16 section-fade-in">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6">
+                        <span className="text-sm text-accent font-medium">Institute Highlights</span>
                     </div>
-                    
-                    <img
-                        src="/images/trainingpartner.png"
-                        alt="GPDTI Staff training"
-                        className="w-full h-full object-cover transition-all duration-500"
-                        referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80" />
-                    <div className="absolute bottom-0 left-0 right-0">
-                        <motion.div 
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            className="bg-zinc-950/80 backdrop-blur-xl px-6 py-5 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
-                        >
-                            <div className="flex items-center gap-4">
-                                <div className="space-y-1">
-                                    <p className="font-[family-name:var(--font-rajdhani)] text-white text-sm md:text-base font-bold leading-tight">
-                                        GPDTI Staff Training Program
-                                    </p>
-                                    <p className="text-white/50 text-xs mt-1">
-                                        CAPT Bhopal — Drone Technology and Its Application
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <div className="p-[1px] rounded-full bg-gradient-to-r from-primary via-accent to-primary">
-                                    <div className="px-3 py-1 rounded-full bg-zinc-900/90 backdrop-blur-md">
-                                        <span className="text-[10px] font-bold text-white uppercase tracking-widest">December 2024</span>
-                                    </div>
-                                </div>
-                                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
-                            </div>
-                        </motion.div>
-                    </div>
-                </motion.div>
+                    <h2 className="font-[family-name:var(--font-rajdhani)] text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+                        Institute Highlights & <span className="text-gradient">Achievements</span>
+                    </h2>
+                    <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed tracking-wide">
+                        Key milestones, regulatory approvals, and training accomplishments of GPDTI
+                    </p>
+                </div>
 
-                {/* Right Column: Styled Table with Gradient Border (5/12 width) */}
-                <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="lg:col-span-5 h-full p-[1px] bg-gradient-to-br from-primary via-accent to-primary/20 rounded-3xl"
-                >
-                    <div className="h-full w-full overflow-hidden rounded-[calc(1.5rem-1px)] bg-zinc-950/90 backdrop-blur-xl flex flex-col">
-                        <div className="p-6 relative bg-white/5 text-center">
-                            <h3 className="font-[family-name:var(--font-rajdhani)] text-xl font-bold text-white mb-1">Elite Partners</h3>
-                            <p className="text-xs text-white/50">Authorized Training Institutions</p>
-                            {/* Header Gradient Border */}
-                            <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-primary/50 via-accent/50 to-transparent" />
-                        </div>
-                        
-                        <div className="flex-1 overflow-y-auto custom-scrollbar">
-                            <div className="divide-y divide-white/5">
-                                {/* Table Header Replacement */}
-                                <div className="grid grid-cols-2 px-6 py-4 bg-white/10 relative sticky top-0 z-10 backdrop-blur-md text-center">
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-primary">Partner</span>
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-accent">Focus</span>
-                                    <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-primary via-accent to-transparent opacity-30" />
-                                </div>
-
-                                {/* Table Body Replacement */}
-                                {tableData.map((row, idx) => (
-                                    <div
-                                        key={idx}
-                                        className="grid grid-cols-2 px-6 py-6 group transition-colors hover:bg-white/5 relative"
+                <div className="relative group">
+                    {/* Carousel Container */}
+                    <div className="relative h-[750px] lg:h-[450px] overflow-hidden">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={currentSlide}
+                                className="w-full h-full"
+                            >
+                                <div className="flex flex-col lg:flex-row gap-12 h-full items-stretch justify-center">
+                                    {/* Left Side: Image (Animate from Left) */}
+                                    <motion.div
+                                        initial={{ x: -100, opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        exit={{ x: -100, opacity: 0 }}
+                                        transition={{ duration: 0.6, ease: "easeOut" }}
+                                        className={`relative group/img rounded-[24px] overflow-hidden border border-accent/20 h-[350px] lg:h-full cursor-pointer ${slides[currentSlide].imageBg || ""} ${slides[currentSlide].tightContainer ? "w-full lg:w-auto lg:aspect-[3/4]" : "w-full lg:w-[58.33%]"}`}
+                                        onClick={() => setIsLightboxOpen(true)}
                                     >
-                                        <div className="pr-2">
-                                            <div className="font-[family-name:var(--font-rajdhani)] text-base font-bold text-white group-hover:text-primary transition-colors">
-                                                {row.partner}
-                                            </div>
-                                            <div className="text-[10px] text-white/40 font-mono mt-1 uppercase">
-                                                {row.location}
+                                        <div className="absolute top-4 right-4 z-20 opacity-0 group-hover/img:opacity-100 transition-opacity">
+                                            <div className="bg-black/50 backdrop-blur-md p-2 rounded-full border border-white/20">
+                                                <Maximize2 className="w-5 h-5 text-white" />
                                             </div>
                                         </div>
-                                        <div className="pl-2">
-                                            <div className="text-xs text-white/60 italic leading-relaxed">
-                                                {row.focus}
-                                            </div>
+                                        <img
+                                            src={slides[currentSlide].image}
+                                            alt={slides[currentSlide].title}
+                                            className={`w-full h-full transition-transform duration-700 ${slides[currentSlide].objectFit === "contain" ? "object-contain p-4" : "object-cover"}`}
+                                        />
+                                        {/* Dark Overlay Caption */}
+                                        <div className="absolute inset-x-0 bottom-0 bg-black/70 backdrop-blur-md p-6 border-t border-white/10">
+                                            <p className="text-sm text-white/90 font-medium leading-relaxed">
+                                                {slides[currentSlide].imageCaption}
+                                            </p>
                                         </div>
-                                        {/* Subtle Gradient Row Divider */}
-                                        <div className="absolute bottom-0 left-6 right-6 h-[1px] bg-gradient-to-r from-primary/20 via-accent/20 to-transparent" />
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                                    </motion.div>
+
+                                    {/* Right Side: Content (Animate from Right) */}
+                                    <motion.div
+                                        initial={{ x: 100, opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        exit={{ x: 100, opacity: 0 }}
+                                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                                        className={`flex flex-col justify-center py-4 ${slides[currentSlide].tightContainer ? "flex-1 max-w-xl" : "w-full lg:w-[41.66%]"}`}
+                                    >
+                                        <h3 className="font-[family-name:var(--font-rajdhani)] text-3xl md:text-4xl font-bold text-foreground mb-8">
+                                            {slides[currentSlide].title}
+                                        </h3>
+
+                                        {/* Render Content Based on Type */}
+                                        {slides[currentSlide].content?.type === "table" && (
+                                            <div className="overflow-hidden rounded-xl border border-white/5 bg-white/[0.02]">
+                                                <table className="w-full text-left text-sm">
+                                                    <thead>
+                                                        <tr className="bg-white/5 border-b border-white/10">
+                                                            <th className="px-6 py-4 font-bold text-accent uppercase tracking-wider">Partner</th>
+                                                            <th className="px-6 py-4 font-bold text-accent uppercase tracking-wider">Focus</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody className="divide-y divide-white/5">
+                                                        {slides[currentSlide].content.data?.map((row, idx) => (
+                                                            <tr key={idx} className="hover:bg-white/[0.03] transition-colors">
+                                                                <td className="px-6 py-4">
+                                                                    <div className="font-bold text-foreground mb-0.5">{row.partner}</div>
+                                                                    <div className="text-[10px] text-muted-foreground uppercase tracking-widest">{row.location}</div>
+                                                                </td>
+                                                                <td className="px-6 py-4 text-muted-foreground italic leading-relaxed">
+                                                                    {row.focus}
+                                                                </td>
+                                                            </tr>
+                                                        ))}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        )}
+
+                                        {slides[currentSlide].content?.type === "list" && (
+                                            <ul className="space-y-4">
+                                                {slides[currentSlide].content.points?.map((point, idx) => (
+                                                    <li key={idx} className="flex items-start gap-4 group/item">
+                                                        <div className="mt-1 flex-shrink-0">
+                                                            <CheckCircle2 className="w-6 h-6 text-accent drop-shadow-[0_0_8px_var(--glow-green)]" />
+                                                        </div>
+                                                        <span className="text-muted-foreground text-lg leading-relaxed group-hover/item:text-foreground transition-colors">
+                                                            {point}
+                                                        </span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+
+                                        {slides[currentSlide].content?.type === "cards" && (
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                                {slides[currentSlide].content.cards?.map((card, idx) => (
+                                                    <div key={idx} className="p-4 rounded-xl border border-white/10 bg-white/[0.02] hover:border-accent/30 transition-all group/card">
+                                                        <div className="text-[9px] font-bold text-accent uppercase tracking-[2px] mb-1">
+                                                            {card.label}
+                                                        </div>
+                                                        <div className="text-foreground text-sm font-medium transition-colors truncate">
+                                                            {card.value}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </motion.div>
+                                </div>
+                            </motion.div>
+                        </AnimatePresence>
                     </div>
-                </motion.div>
+
+                    {/* Dot Indicators */}
+                    <div className="flex justify-center gap-3 mt-12">
+                        {slides.map((_, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => {
+                                    setCurrentSlide(idx);
+                                }}
+                                className={`h-2 rounded-full transition-all duration-300 ${idx === currentSlide
+                                    ? "w-8 bg-accent"
+                                    : "w-2 bg-white/20 hover:bg-white/40"
+                                    }`}
+                                aria-label={`Go to slide ${idx + 1}`}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
 
             {/* Lightbox Modal */}
@@ -196,13 +265,13 @@ export default function TrainingPartners() {
                             onClick={(e) => e.stopPropagation()}
                         >
                             <img
-                                src="/images/trainingpartner.png"
-                                alt="GPDTI Staff training"
+                                src={slides[currentSlide].image}
+                                alt={slides[currentSlide].title}
                                 className="max-w-full max-h-full object-contain rounded-xl shadow-[0_0_50px_rgba(0,0,0,0.5)]"
                             />
                             <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
                                 <p className="text-white/80 text-sm font-medium italic">
-                                    GPDTI Staff at CAPT — Drone Technology and Its Application Course, Bhopal, December 2024
+                                    {slides[currentSlide].imageCaption}
                                 </p>
                             </div>
                         </motion.div>
@@ -212,4 +281,3 @@ export default function TrainingPartners() {
         </section>
     );
 }
-

@@ -32,13 +32,13 @@ const phase3Features = [
   { icon: Cctv, title: "CCTV Integration", description: "Unified surveillance network" },
 ]
 
-export default function FutureVisionSection() {
+export default function FutureRoadmapSection() {
   return (
-    <section id="vision" className="relative py-12 md:py-16 overflow-hidden">
+    <section id="roadmap" className="relative py-12 md:py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
       <div className="absolute inset-0 grid-background opacity-30" />
-      
+
       {/* Animated Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" />
@@ -49,10 +49,10 @@ export default function FutureVisionSection() {
         {/* Section Header */}
         <div className="text-center mb-16 section-fade-in">
           <h2 className="font-[family-name:var(--font-rajdhani)] text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Future <span className="text-gradient">Vision</span>
+            Future <span className="text-gradient">Roadmap</span>
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed tracking-wide">
-            Our roadmap for transforming Gujarat Police into a fully AI-integrated smart policing force 
+            Our roadmap for transforming Gujarat Police into a fully AI-integrated smart policing force
             with advanced drone surveillance capabilities.
           </p>
         </div>
@@ -158,11 +158,11 @@ export default function FutureVisionSection() {
                 Building Tomorrow&apos;s <span className="text-gradient">Smart Police Force</span>
               </h3>
               <p className="font-sans text-muted-foreground max-w-2xl mx-auto leading-relaxed tracking-wide mb-8">
-                Gujarat Police is committed to leveraging cutting-edge technology to create a safer, 
-                more responsive, and intelligent policing ecosystem. Our phased approach ensures 
+                Gujarat Police is committed to leveraging cutting-edge technology to create a safer,
+                more responsive, and intelligent policing ecosystem. Our phased approach ensures
                 systematic implementation with measurable outcomes.
               </p>
-              <Button 
+              <Button
                 variant="outline"
                 className="h-10 px-8 border-accent text-white hover:text-white bg-transparent hover:bg-transparent text-sm font-semibold transition-all duration-300 hover:scale-105 rounded-full"
               >

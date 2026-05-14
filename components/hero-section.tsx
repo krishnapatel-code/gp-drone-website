@@ -15,10 +15,10 @@ const carouselImages = [
   //   url: "/images/gujarat-police-coverage-vision.png",
   //   alt: "Aerial city monitoring",
   // },
-  {
-    url: "https://res.cloudinary.com/da5v0lev4/video/upload/q_auto/f_auto/v1776833508/Drone_Surveillance_of_Ahmedabad_Crowd_pnuvum.mp4",
-    alt: "Police drone operation",
-  },
+  // {
+  //   url: "https://res.cloudinary.com/da5v0lev4/video/upload/q_auto/f_auto/v1776833508/Drone_Surveillance_of_Ahmedabad_Crowd_pnuvum.mp4",
+  //   alt: "Police drone operation",
+  // },
 
 ]
 

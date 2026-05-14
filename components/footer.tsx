@@ -4,16 +4,20 @@ import { Shield, ExternalLink, Twitter, Facebook, Youtube, Instagram, Linkedin }
 
 const quickLinksLeft = [
   { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Establishment", href: "#establishment" },
+  { label: "Highlights", href: "#partners" },
   { label: "Capabilities", href: "#capabilities" },
-  { label: "Use Cases", href: "#use-cases" },
+  { label: "Programs", href: "#programs" },
 ]
 
 const quickLinksRight = [
+  { label: "Operations", href: "#operations" },
+  { label: "Zones", href: "#zones" },
   { label: "News", href: "#news" },
+  { label: "Events", href: "#training" },
   { label: "Gallery", href: "#gallery" },
-  { label: "Training", href: "#training" },
-  { label: "Future Vision", href: "#vision" },
-  { label: "About", href: "#about" },
+  { label: "Future Roadmap", href: "#roadmap" },
 ]
 
 const socialLinks = [
@@ -35,31 +39,23 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-20 pt-[60px]">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 mb-[40px]">
-          
+
           {/* COLUMN 1: Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <div className="relative flex items-center justify-center">
-                <img 
-                  src="https://res.cloudinary.com/da5v0lev4/image/upload/v1778497017/logo_rfw6jb.png" 
+                <img
+                  src="https://res.cloudinary.com/da5v0lev4/image/upload/v1778497017/logo_rfw6jb.png"
                   alt="Gujarat Police Logo"
-                  className="w-14 h-14 object-contain"
+                  className="w-22 h-22 object-contain"
                 />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-[family-name:var(--font-rajdhani)] text-base font-bold text-foreground tracking-wide leading-tight">
-                  GUJARAT POLICE
-                </span>
-                <span className="text-[10px] text-muted-foreground/80 tracking-[0.2em] font-semibold uppercase leading-tight">
-                  Drone Training Institute
-                </span>
               </div>
             </div>
             <p className="text-sm text-[#aab3c0] leading-relaxed max-w-sm">
-              Empowering law enforcement through specialized drone training. The Gujarat Police 
+              Empowering law enforcement through specialized drone training. The Gujarat Police
               Drone Training Institute provides professional aerial surveillance expertise.
             </p>
-            
+
             {/* Social Icons */}
             <div className="flex items-center gap-[10px]">
               {socialLinks.map((social, index) => (
@@ -86,7 +82,7 @@ export default function Footer() {
                   <button
                     key={link.href}
                     onClick={() => scrollToSection(link.href)}
-                    className="text-[14px] text-[#aab3c0] hover:text-white hover:pl-1 transition-all duration-200 text-left whitespace-nowrap"
+                    className="text-[14px] text-[#aab3c0] hover:text-[#00e6b4] transition-all duration-200 text-left whitespace-nowrap"
                   >
                     {link.label}
                   </button>
@@ -98,7 +94,7 @@ export default function Footer() {
                   <button
                     key={link.href}
                     onClick={() => scrollToSection(link.href)}
-                    className="text-[14px] text-[#aab3c0] hover:text-white hover:pl-1 transition-all duration-200 text-left whitespace-nowrap"
+                    className="text-[14px] text-[#aab3c0] hover:text-[#00e6b4] transition-all duration-200 text-left whitespace-nowrap"
                   >
                     {link.label}
                   </button>
@@ -154,7 +150,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Gujarat Police. All rights reserved.
           </p>
           <p className="text-[13px] text-white/35">
-            Drone Response & Surveillance Technology Integration
+            Gujarat Police Drone Training Institute
           </p>
         </div>
       </div>
@@ -165,8 +161,8 @@ export default function Footer() {
           <div className="inline-block px-6 py-3 rounded-xl border border-red-500/20 bg-red-500/[0.02]">
             <p className="text-[12px] text-red-500/90 leading-relaxed font-medium">
               <span className="mr-2">🔒</span>
-              <span className="font-bold">ATTENTION:</span> This platform is intended for authorized police and internal government use only. 
-              Unauthorized access, use, or distribution of information is strictly prohibited 
+              <span className="font-bold">ATTENTION:</span> This platform is intended for authorized police and internal government use only.
+              Unauthorized access, use, or distribution of information is strictly prohibited
               and may result in legal action.
             </p>
           </div>

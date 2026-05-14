@@ -106,26 +106,7 @@ export default function CapabilitiesSection() {
           ))}
         </div>
 
-        {/* Stats Bar */}
-        <div className="mt-16 section-fade-in">
-          <div className="glass-card rounded-2xl p-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { value: "14", label: "Training Programs Conducted" },
-                { value: "33", label: "Districts & Cities" },
-                { value: "102", label: "RPTO Certified" },
-                { value: "5", label: "Drone Categories" },
-              ].map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="font-[family-name:var(--font-rajdhani)] text-3xl md:text-4xl font-bold text-primary mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   )

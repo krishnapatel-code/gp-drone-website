@@ -94,7 +94,7 @@ export default function OperationsSection() {
   }, [])
 
   return (
-    <section className="relative py-12 md:py-16 overflow-hidden">
+    <section id="operations" className="relative py-12 md:py-16 overflow-hidden">
       <style jsx>{`
         @keyframes flow {
           0% { top: -100%; opacity: 0; }

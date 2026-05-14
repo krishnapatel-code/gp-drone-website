@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import Header from "@/components/header"
 import HeroSection from "@/components/hero-section"
+import StatsBar from "@/components/stats-bar"
 import AboutSection from "@/components/about-section"
 import EstablishmentSection from "@/components/establishment-section"
 import CapabilitiesSection from "@/components/capabilities-section"
@@ -13,7 +14,7 @@ import NewsSection from "@/components/news-section"
 import EventsSection from "@/components/events-section"
 import TrainingProgramsTable from "@/components/trainingprogramstable"
 import GallerySection from "@/components/gallery-section"
-import FutureVisionSection from "@/components/future-vision-section"
+import FutureRoadmapSection from "@/components/future-roadmap-section"
 import Footer from "@/components/footer"
 
 export default function Home() {
@@ -41,8 +42,8 @@ export default function Home() {
     <main className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       <HeroSection />
+      <StatsBar />
       <AboutSection />
-      <EstablishmentSection />
       <TrainingPartners />
       <CapabilitiesSection />
       <TrainingProgramsTable />
@@ -50,8 +51,9 @@ export default function Home() {
       <ZoneSection />
       <NewsSection />
       <EventsSection />
+      <EstablishmentSection />
       <GallerySection />
-      <FutureVisionSection />
+      <FutureRoadmapSection />
       <Footer />
     </main>
   )

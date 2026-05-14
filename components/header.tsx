@@ -5,9 +5,10 @@ import { Shield, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { href: "#vision", label: "Vision" },
+  { href: "#about", label: "Vision" },
   { href: "#news", label: "News" },
   { href: "#training", label: "Training" },
+  { href: "#roadmap", label: "Roadmap" },
 ]
 
 export default function Header() {
@@ -32,11 +33,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/60 backdrop-blur-xl border-b border-border/30"
-          : "bg-background/20 backdrop-blur-sm"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/60 backdrop-blur-xl border-b border-border/30"
+        : "bg-background/20 backdrop-blur-sm"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16 md:h-20">
@@ -44,19 +44,11 @@ export default function Header() {
           <div className="flex-1 flex items-center justify-start">
             <div className="flex items-center gap-3">
               <div className="relative flex items-center justify-center">
-                <img 
-                  src="https://res.cloudinary.com/da5v0lev4/image/upload/v1778497017/logo_rfw6jb.png" 
+                <img
+                  src="https://res.cloudinary.com/da5v0lev4/image/upload/v1778497017/logo_rfw6jb.png"
                   alt="Gujarat Police Logo"
-                  className="w-12 h-12 md:w-14 md:h-14 object-contain"
+                  className="w-16 h-16 md:w-22 md:h-22 object-contain"
                 />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-[family-name:var(--font-rajdhani)] text-sm md:text-base font-semibold text-foreground tracking-wide">
-                  GUJARAT POLICE
-                </span>
-                <span className="text-[10px] md:text-xs text-muted-foreground/80 tracking-widest uppercase">
-                  Drone Training Institute
-                </span>
               </div>
             </div>
           </div>
