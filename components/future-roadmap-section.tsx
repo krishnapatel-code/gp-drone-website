@@ -59,26 +59,26 @@ export default function FutureRoadmapSection() {
 
         {/* Phase 2 */}
         <div className="mb-16 section-fade-in">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center neon-glow">
-                <span className="font-[family-name:var(--font-rajdhani)] text-xl font-bold text-primary">2</span>
-              </div>
-              <div>
-                <h3 className="font-[family-name:var(--font-rajdhani)] text-2xl font-bold text-foreground">
+          <div className="flex flex-col gap-2 mb-8">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3 shrink-0">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary/20 flex items-center justify-center neon-glow">
+                  <span className="font-[family-name:var(--font-rajdhani)] text-lg md:text-xl font-bold text-primary">2</span>
+                </div>
+                <h3 className="font-[family-name:var(--font-rajdhani)] text-xl md:text-2xl font-bold text-foreground">
                   Phase 2
                 </h3>
-                <p className="text-sm text-muted-foreground">Management Platform</p>
+              </div>
+              <div className="flex-1 h-px bg-gradient-to-r from-primary/50 to-transparent" />
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 shrink-0">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent" />
+                </span>
+                <span className="text-[9px] md:text-[10px] font-bold text-accent uppercase tracking-widest whitespace-nowrap">Coming Soon</span>
               </div>
             </div>
-            <div className="flex-1 h-px bg-gradient-to-r from-primary/50 to-transparent" />
-            <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
-              </span>
-              <span className="text-[10px] font-bold text-accent uppercase tracking-widest">Coming Soon</span>
-            </div>
+            <p className="text-xs md:text-sm text-muted-foreground ml-[52px] md:ml-[60px] opacity-80 leading-none">Management Platform</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -101,26 +101,26 @@ export default function FutureRoadmapSection() {
 
         {/* Phase 3 */}
         <div className="section-fade-in">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
-                <span className="font-[family-name:var(--font-rajdhani)] text-xl font-bold text-accent">3</span>
-              </div>
-              <div>
-                <h3 className="font-[family-name:var(--font-rajdhani)] text-2xl font-bold text-foreground">
+          <div className="flex flex-col gap-2 mb-8">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3 shrink-0">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent/20 flex items-center justify-center">
+                  <span className="font-[family-name:var(--font-rajdhani)] text-lg md:text-xl font-bold text-accent">3</span>
+                </div>
+                <h3 className="font-[family-name:var(--font-rajdhani)] text-xl md:text-2xl font-bold text-foreground">
                   Phase 3
                 </h3>
-                <p className="text-sm text-muted-foreground">AI Vision</p>
+              </div>
+              <div className="flex-1 h-px bg-gradient-to-r from-accent/50 to-transparent" />
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 shrink-0">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent" />
+                </span>
+                <span className="text-[9px] md:text-[10px] font-bold text-accent uppercase tracking-widest whitespace-nowrap">Coming Soon</span>
               </div>
             </div>
-            <div className="flex-1 h-px bg-gradient-to-r from-accent/50 to-transparent" />
-            <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
-              </span>
-              <span className="text-[10px] font-bold text-accent uppercase tracking-widest">Coming Soon</span>
-            </div>
+            <p className="text-xs md:text-sm text-muted-foreground ml-[52px] md:ml-[60px] opacity-80 leading-none">AI Vision</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

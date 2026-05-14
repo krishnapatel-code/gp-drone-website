@@ -111,7 +111,7 @@ export default function TrainingPartners() {
 
                 <div className="relative group">
                     {/* Carousel Container */}
-                    <div className="relative h-[750px] lg:h-[450px] overflow-hidden">
+                    <div className="relative h-[800px] sm:h-[750px] lg:h-[500px] overflow-hidden">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentSlide}
@@ -124,7 +124,7 @@ export default function TrainingPartners() {
                                         animate={{ x: 0, opacity: 1 }}
                                         exit={{ x: -100, opacity: 0 }}
                                         transition={{ duration: 0.6, ease: "easeOut" }}
-                                        className={`relative group/img rounded-[24px] overflow-hidden border border-accent/20 h-[350px] lg:h-full cursor-pointer ${slides[currentSlide].imageBg || ""} ${slides[currentSlide].tightContainer ? "w-full lg:w-auto lg:aspect-[3/4]" : "w-full lg:w-[58.33%]"}`}
+                                        className={`relative group/img rounded-[24px] overflow-hidden border border-accent/20 cursor-pointer ${slides[currentSlide].imageBg || ""} ${slides[currentSlide].tightContainer ? "w-full aspect-[4/5] lg:aspect-auto lg:w-auto lg:h-full lg:aspect-[3/4]" : "w-full aspect-video lg:aspect-auto lg:w-[58.33%] lg:h-full"}`}
                                         onClick={() => setIsLightboxOpen(true)}
                                     >
                                         <div className="absolute top-4 right-4 z-20 opacity-0 group-hover/img:opacity-100 transition-opacity">
