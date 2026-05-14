@@ -36,7 +36,7 @@ export default function StatsBar() {
                   <div className="text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-[1.5px] mb-1.5 opacity-70 group-hover/item:opacity-100 transition-opacity">
                     {stat.label}
                   </div>
-                  <div className="font-[family-name:var(--font-rajdhani)] text-xl md:text-2xl lg:text-3xl font-bold text-white tracking-wide">
+                  <div className="font-[family-name:var(--font-rajdhani)] text-lg md:text-xl lg:text-2xl font-bold text-white tracking-wide">
                     {stat.value}
                   </div>
                 </div>
